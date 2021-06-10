@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+.sr-only {
+    display: none;
+}
+
+
+.float-child {
+    width: 3.22%;
+    float: left;
+    border: 1px solid rgb(250, 244, 244);
+}  
+.text-center {
+    border: 1px solid #c2d1cf;
+padding: 0px 0;
+}

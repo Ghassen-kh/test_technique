@@ -1,0 +1,229 @@
+  
+<h1>Test Technique</h1>
+
+<div class="row" >
+  <div class="col-lg-1" >
+    <div class="row" style="margin-left: 10px;padding-right: 0px;">
+      <div 
+      class="mx-auto mt-1 text-black text-center pt-2 pb-2 mx-auto rounded font-weight-bold"
+      style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center;height: 120px;"
+      >
+      Utilisateur
+      </div>
+    </div>  
+      <div class="row" style="margin-left: 10px;padding-right: 0px;">
+        <div 
+        class="mx-auto mt-1 text-black text-center pt-2 pb-2 mx-auto rounded font-weight-bold"
+        style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center;height: 120px;"
+        >
+          <div class="col-12 text-center mt-2">
+            <img src="assets/user.png" width="50px" />
+          </div>   
+          <span>Amelie Rostard</span>   
+        </div>
+      </div>  
+      <div class="row" style="margin-left: 10px;padding-right: 0px;">
+        <div 
+        class="mx-auto mt-1 text-black text-center pt-2 pb-2 mx-auto rounded font-weight-bold"
+        style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center;height: 120px;"
+        >
+          <div class="col-12 text-center mt-2">
+            <img src="assets/user.png" width="50px" />
+          </div>   
+          <span>Karine Florano</span>   
+        </div>
+      </div>  
+      <div class="row" style="margin-left: 10px;padding-right: 0px;">
+        <div 
+        class="mx-auto mt-1 text-black text-center pt-2 pb-2 mx-auto rounded font-weight-bold"
+        style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center;height: 120px;"
+        >
+          <div class="col-12 text-center mt-2">
+            <img src="assets/user.png" width="50px" />
+          </div>   
+          <span>Sara Doro</span>   
+        </div>
+      </div>  
+  </div>
+  <div class="col-lg-11 " style="padding-left:2px;padding-right: 20px;" >
+      <div 
+      class=" mx-auto mt-1 text-black text-center pt-2 pb-2 mx-auto rounded font-weight-bold"
+      style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;"
+      >
+        <ngb-carousel   interval="false" >
+            <ng-template *ngFor="let date  of dates; let index = index" ngbSlide>
+              <div style="margin-bottom: 8px;">
+                {{date | date:"MMMM y" }}
+              </div> 
+              <div class="float-container" *ngIf="date.getMonth()==0 || date.getMonth()==2 || date.getMonth()==4 || date.getMonth()==6 || date.getMonth()==7 || date.getMonth()==9 || date.getMonth()==11">
+                <div class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]" 
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" [ngSwitch]="(date.getDay()+ number)%7">
+                  <div *ngSwitchCase="0">D.
+                  </div>
+                  <div *ngSwitchCase="1">L.
+                  </div>
+                  <div *ngSwitchCase="2">M.
+                  </div>
+                  <div *ngSwitchCase="3">Me.
+                  </div>
+                  <div *ngSwitchCase="4">J.
+                  </div>
+                  <div *ngSwitchCase="5">V.
+                  </div>
+                  <div *ngSwitchDefault>S.
+                  </div>
+                  
+                </div>      
+              </div>
+              <div class="float-container" *ngIf="date.getMonth()==1 || date.getMonth()==3 || date.getMonth()==5 || date.getMonth()==8 || date.getMonth()==10 ">
+                <div class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]" 
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" [ngSwitch]="(date.getDay()+ number)%7">
+                  <div *ngSwitchCase="0">D.
+                  </div>
+                  <div *ngSwitchCase="1">L.
+                  </div>
+                  <div *ngSwitchCase="2">M.
+                  </div>
+                  <div *ngSwitchCase="3">Me.
+                  </div>
+                  <div *ngSwitchCase="4">J.
+                  </div>
+                  <div *ngSwitchCase="5">V.
+                  </div>
+                  <div *ngSwitchDefault>S.
+                  </div>
+                  
+                </div>  
+                <div class="float-child"
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  <div></div>
+                </div>      
+              </div>
+              <div class="float-container"*ngIf="date.getMonth()==0 || date.getMonth()==2 || date.getMonth()==4 || date.getMonth()==6 || date.getMonth()==7 || date.getMonth()==9 || date.getMonth()==11">
+                <div  class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]"
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  {{date.getDate() + number}}
+                </div>      
+              </div>
+              <div class="float-container" *ngIf="date.getMonth()==1 || date.getMonth()==3 || date.getMonth()==5 || date.getMonth()==8 || date.getMonth()==10 ">
+                <div  class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]"
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  {{date.getDate() + number}}
+                </div> 
+                <div  class="float-child" 
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  
+                </div>   
+     
+              </div>
+
+                <div  style="background-color: #718d97; margin-right: 0px;" >
+                  <div class="row mt-2">
+                    <div class="col-1  text-left">
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-secondary dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton"
+                          data-toggle="dropdown"
+                        >
+                        A
+                        </button>
+                        <div class="dropdown-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            *ngFor="let user of Users"
+                            
+                            ><span>{{user}}</span> </a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="float-container">
+                  <div class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]" (click)="onDayClick($event)"  [attr.id]="'Amelie Rostard le ' +  [number+1] + [date | date:' MMMM y'] " data-toggle="modal" [attr.data-target]="'#'+ 'A ' [number+1] + [date | date:' MMMM y'] "
+                  style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 82px;margin-top: 3px;">
+                  </div>      
+                </div>
+                <div  style="background-color: #718d97; margin-right: 0px;" >
+                  <div class="row mt-2">
+                    <div class="col-1  text-left">
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-secondary dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton"
+                          data-toggle="dropdown"
+                        >
+                        K
+                        </button>
+                        <div class="dropdown-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            *ngFor="let user of Users"
+                            
+                            ><span>{{user}}</span> </a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="float-container">
+                  <div class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]" (click)="onDayClick($event)"  [attr.id]="'Karine Florano le ' +  [number+1] + [date | date:' MMMM y'] " data-toggle="modal" [attr.data-target]="'#'+ 'K ' [number+1] + [date | date:' MMMM y'] "
+                  style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 82px;margin-top: 3px;">
+                  </div>      
+                </div>
+                <div  style="background-color: #718d97; margin-right: 0px;" >
+                  <div class="row mt-2">
+                    <div class="col-1  text-left">
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-secondary dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton"
+                          data-toggle="dropdown"
+                        >
+                        S
+                        </button>
+                        <div class="dropdown-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            *ngFor="let user of Users"
+                            
+                            ><span>{{user}}</span> </a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="float-container">
+                  <div class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]" (click)="onDayClick($event)"  [attr.id]="'Sara Doro le ' +  [number+1] + [date | date:' MMMM y'] " data-toggle="modal" [attr.data-target]="'#'+ 'S ' [number+1] + [date | date:' MMMM y'] " 
+                  style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 82px;margin-top: 3px;">
+                  </div>      
+                  
+                  <div *ngFor="let evenmt of evennements"> un événnement à été ajouté par {{evenmt}}</div>
+                </div>
+            
+          </ng-template>
+        </ngb-carousel>
+      </div>
+
+  </div>
+</div>
+
+
+
+
+<!--
+<div class="container">
+  <full-calendar [options]="calendarOptions"></full-calendar>
+</div>
+-->
