@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "test-4122b": {
+      "hosting": {
+        "calendar-test": [
+          "test-4122b"
+        ]
+      }
+    }
+  }
+}

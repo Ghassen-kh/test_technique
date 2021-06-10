@@ -14,6 +14,11 @@ import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { TimelineResourcesComponent } from './timeline-resources/timeline-resources.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+
 
 FullCalendarModule.registerPlugins([ 
   interactionPlugin,
@@ -32,7 +37,10 @@ FullCalendarModule.registerPlugins([
     NgbModule,
     SlickCarouselModule,
     FullCalendarModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
