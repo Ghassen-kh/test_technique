@@ -24,7 +24,7 @@ export class CalendarComponent implements OnInit {
   eventDate: string;
   evennements = [];
   ngOnInit(): void {
-    this.today.setFullYear(2021);
+    this.today.setFullYear(2020);
     this.today.setMonth(0);
     this.today.setDate(1);
     this.dates = new Array();
