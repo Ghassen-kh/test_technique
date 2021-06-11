@@ -75,7 +75,7 @@
                   
                 </div>      
               </div>
-              <div class="float-container" *ngIf="date.getMonth()==1 || date.getMonth()==3 || date.getMonth()==5 || date.getMonth()==8 || date.getMonth()==10 ">
+              <div class="float-container" *ngIf="date.getMonth()==3 || date.getMonth()==5 || date.getMonth()==8 || date.getMonth()==10 ">
                 <div class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]" 
                 style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" [ngSwitch]="(date.getDay()+ number)%7">
                   <div *ngSwitchCase="0">D.
@@ -99,17 +99,112 @@
                   <div></div>
                 </div>      
               </div>
+              <div class="float-container" *ngIf="(date.getMonth()==1) && (date.getFullYear() % 4 != 0)">
+                <div class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]" 
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" [ngSwitch]="(date.getDay()+ number)%7">
+                  <div *ngSwitchCase="0">D.
+                  </div>
+                  <div *ngSwitchCase="1">L.
+                  </div>
+                  <div *ngSwitchCase="2">M.
+                  </div>
+                  <div *ngSwitchCase="3">Me.
+                  </div>
+                  <div *ngSwitchCase="4">J.
+                  </div>
+                  <div *ngSwitchCase="5">V.
+                  </div>
+                  <div *ngSwitchDefault>S.
+                  </div>
+                  
+                </div>  
+                <div class="float-child"
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  <div></div>
+                </div>   
+                <div class="float-child"
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  <div></div>
+                </div>      
+              </div>
+              <div class="float-container" *ngIf="(date.getMonth()==1) && (date.getFullYear() % 4 == 0)">
+                <div class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]" 
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" [ngSwitch]="(date.getDay()+ number)%7">
+                  <div *ngSwitchCase="0">D.
+                  </div>
+                  <div *ngSwitchCase="1">L.
+                  </div>
+                  <div *ngSwitchCase="2">M.
+                  </div>
+                  <div *ngSwitchCase="3">Me.
+                  </div>
+                  <div *ngSwitchCase="4">J.
+                  </div>
+                  <div *ngSwitchCase="5">V.
+                  </div>
+                  <div *ngSwitchDefault>S.
+                  </div>
+                  
+                </div>  
+                <div class="float-child"
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  <div></div>
+                </div> 
+                <div class="float-child"
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  <div></div>
+                </div>   
+                <div class="float-child"
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  <div></div>
+                </div>      
+              </div>
               <div class="float-container"*ngIf="date.getMonth()==0 || date.getMonth()==2 || date.getMonth()==4 || date.getMonth()==6 || date.getMonth()==7 || date.getMonth()==9 || date.getMonth()==11">
                 <div  class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]"
                 style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
                   {{date.getDate() + number}}
                 </div>      
               </div>
-              <div class="float-container" *ngIf="date.getMonth()==1 || date.getMonth()==3 || date.getMonth()==5 || date.getMonth()==8 || date.getMonth()==10 ">
+              <div class="float-container" *ngIf="date.getMonth()==3 || date.getMonth()==5 || date.getMonth()==8 || date.getMonth()==10 ">
                 <div  class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]"
                 style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
                   {{date.getDate() + number}}
                 </div> 
+                <div  class="float-child" 
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  
+                </div>   
+     
+              </div>
+              <div class="float-container" *ngIf="(date.getMonth()==1) && (date.getFullYear()%4 != 0)">
+                <div  class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]"
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  {{date.getDate() + number}}
+                </div> 
+                <div  class="float-child" 
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  
+                </div>  
+                <div  class="float-child" 
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  
+                </div>   
+     
+              </div>
+              
+              <div class="float-container" *ngIf="(date.getMonth()==1) && (date.getFullYear()%4 == 0)">
+                <div  class="float-child" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]"
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  {{date.getDate() + number}}
+                </div> 
+                <div  class="float-child" 
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  
+                </div>  
+                <div  class="float-child" 
+                style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
+                  
+                </div>  
                 <div  class="float-child" 
                 style="background-color: #dae1e4; font-family: 'Arial Narrow';text-align: center; height: 40px;" >
                   
