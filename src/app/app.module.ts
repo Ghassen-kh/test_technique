@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +18,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
 
+// the second parameter 'fr' is optional
+registerLocaleData(localeFr, 'fr');
 
 FullCalendarModule.registerPlugins([ 
   interactionPlugin,
@@ -42,7 +46,8 @@ FullCalendarModule.registerPlugins([
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  
+  providers: [{provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
